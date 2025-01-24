@@ -2,7 +2,7 @@
 
 #### Project Overview
 
-The Malicious URL Detector is a machine learning-based project designed to classify URLs as malicious or benign. It leverages natural language processing (NLP) techniques to tokenize URLs into features and uses machine learning algorithms like Logistic Regression and Support Vector Machines (SVM) for classification.
+The Malicious URL Detector is a machine learning-based project designed to classify URLs as malicious or benign. It leverages natural language processing (NLP) techniques to tokenize URLs into features and uses machine learning algorithms like Support Vector Machines (SVM) for classification.
 
 Our goal is to identify potentially harmful URLs to enhance cybersecurity defenses.
 
@@ -15,7 +15,6 @@ Python
 - Pandas: For data manipulation and preprocessing.
 - NumPy: For numerical computations.
 - Scikit-learn: For machine learning models, feature extraction, and evaluation.
-- Logistic Regression: Linear classifier for baseline modeling.
 - Support Vector Machines (SVM): Non-linear classifier for enhanced accuracy.
 - TfidfVectorizer: To convert URLs into numerical feature vectors based on term frequency-inverse document frequency.
 - CountVectorizer: Alternative feature extraction method (not used directly in the final model).
@@ -51,8 +50,6 @@ Data is split into training and testing subsets (80:20 ratio) using train_test_s
 A random seed (random_state=434) ensures reproducibility.
 
 **Model Building:**
-Logistic Regression:
-A linear classification model for quick and interpretable results.
 Support Vector Machines (SVM):
 A non-linear classifier with radial basis function (RBF) kernel (gamma='scale').
 Hyperparameters:
@@ -60,11 +57,10 @@ C=79: Regularization parameter.
 random_state=12345: Ensures consistent results.
 
 **Model Evaluation:**
-Models are evaluated based on accuracy on the test set.
+Model is evaluated based on accuracy on the test set.
 
 **Key Results**
-Logistic Regression Accuracy: Prints the accuracy score on the test set.
-SVM Accuracy: Achieves a higher score compared to Logistic Regression, demonstrating its ability to capture complex patterns in URL tokens.
+SVM Accuracy: Achieves high score (99.3%), demonstrating its ability to capture complex patterns in URL tokens.
 
 **Future Improvements**
 1. Expand Dataset: Add more labeled data for diverse and robust model training.
